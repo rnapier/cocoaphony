@@ -151,20 +151,13 @@ unsigned int copyBezierXY(CGPoint P0, CGPoint P1, CGPoint P2, CGPoint P3, CGPoin
 unsigned int copyBezierTable(CGPoint P0, CGPoint P1, CGPoint P2, CGPoint P3, CGPoint **results)
 {
   *results = malloc((kSteps + 1) * sizeof(struct CGPoint));
-
+  
   static CGFloat C0[kSteps] = {0};
   static CGFloat C1[kSteps] = {0};
   static CGFloat C2[kSteps] = {0};
   static CGFloat C3[kSteps] = {0};
-  static CGPoint cachedP0 = {0};
-  static CGPoint cachedP1 = {0};
-  static CGPoint cachedP2 = {0};
-  static CGPoint cachedP3 = {0};
-
-  if (! CGPointEqualToPoint(P0, cachedP0) ||
-      ! CGPointEqualToPoint(P1, cachedP1) ||
-      ! CGPointEqualToPoint(P2, cachedP2) ||
-      ! CGPointEqualToPoint(P3, cachedP3))
+  static int sInitialized = 0;
+  if (!sInitialized)
   {
     for (unsigned step = 0; step <= kSteps; ++step)
     {
@@ -174,16 +167,15 @@ unsigned int copyBezierTable(CGPoint P0, CGPoint P1, CGPoint P2, CGPoint P3, CGP
       C2[step] = 3 * (1-t) * t*t; // * P2
       C3[step] = t*t*t; // * P3;
     }
-    cachedP0 = P0;
-    cachedP1 = P1;
-    cachedP2 = P2;
-    cachedP3 = P3;
+    sInitialized = 1;
   }
-
+  
   for (unsigned step = 0; step <= kSteps; ++step)
   {
-    CGPoint point = {C0[step]*P0.x + C1[step]*P1.x + C2[step]*P2.x + C3[step]*P3.x,
-                     C0[step]*P0.y + C1[step]*P1.y + C2[step]*P2.y + C3[step]*P3.y};
+    CGPoint point = {
+      C0[step]*P0.x + C1[step]*P1.x + C2[step]*P2.x + C3[step]*P3.x,
+      C0[step]*P0.y + C1[step]*P1.y + C2[step]*P2.y + C3[step]*P3.y
+    };
     (*results)[step] = point;
   }
   return kSteps + 1;

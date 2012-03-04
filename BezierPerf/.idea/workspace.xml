@@ -22,19 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Bezier.c" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Bezier.c" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BezierPerf/Bezier.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="33" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bezier.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BezierPerf/Bezier.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
+            <state line="109" column="67" selection-start="3221" selection-end="3221" vertical-scroll-proportion="0.1646489">
               <folding />
             </state>
           </provider>
@@ -49,13 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BPAppDelegate.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BPAppDelegate.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BezierPerf/BPAppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="606" selection-end="606" vertical-scroll-proportion="0.1764706">
-              <folding>
-                <element signature="e#140#177#0" expanded="true" />
-              </folding>
+            <state line="16" column="32" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,16 +63,16 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/BezierPerf/BezierPerf.c" />
-        <option value="$PROJECT_DIR$/BezierPerf/Bezier.c" />
-        <option value="$PROJECT_DIR$/BezierPerf/Bezier.h" />
         <option value="$PROJECT_DIR$/BezierPerf/BPAppDelegate.m" />
+        <option value="$PROJECT_DIR$/BezierPerf/Bezier.h" />
+        <option value="$PROJECT_DIR$/BezierPerf/Bezier.c" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="652" />
-    <option name="y" value="163" />
-    <option name="width" value="1680" />
+    <option name="x" value="612" />
+    <option name="y" value="22" />
+    <option name="width" value="1744" />
     <option name="height" value="947" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -112,6 +101,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="DirectoryView.Xcode">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BezierPerf" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeDirectoryView$1$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -124,14 +123,18 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="DirectoryView.Xcode">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="BezierPerf" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeDirectoryView$1$1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BezierPerf" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -200,14 +203,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="652" y="163" width="1680" height="947" extended-state="0" />
+    <frame x="612" y="22" width="1744" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984913" sideWeight="0.62954277" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24927367" sideWeight="0.62954277" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -217,6 +219,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -275,33 +278,29 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BezierPerf/Bezier.c">
+    <entry file="file://$PROJECT_DIR$/BezierPerf/BPAppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+        <state line="16" column="32" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BezierPerf/Bezier.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
+        <state line="18" column="0" selection-start="707" selection-end="707" vertical-scroll-proportion="0.32687652">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BezierPerf/BPAppDelegate.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BezierPerf/BPAppDelegate.m">
+    <entry file="file://$PROJECT_DIR$/BezierPerf/Bezier.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="606" selection-end="606" vertical-scroll-proportion="0.1764706">
-          <folding>
-            <element signature="e#140#177#0" expanded="true" />
-          </folding>
+        <state line="109" column="67" selection-start="3221" selection-end="3221" vertical-scroll-proportion="0.1646489">
+          <folding />
         </state>
       </provider>
     </entry>
