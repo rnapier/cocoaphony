@@ -15,6 +15,7 @@
 		74401A49EBA8261D328B36A /* BPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74401A49EBA8261D328B369 /* BPAppDelegate.m */; };
 		74401A49EBA8261D328B36C /* Bezier.c in Sources */ = {isa = PBXBuildFile; fileRef = 74401A49EBA8261D328B36B /* Bezier.c */; };
 		FBA13D9714F6DBE70021D991 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA13D9614F6DBE70021D991 /* Accelerate.framework */; };
+		FBCA1FC01503E63D007BEC19 /* BezierAsm.s in Sources */ = {isa = PBXBuildFile; fileRef = FBCA1FBF1503E63D007BEC19 /* BezierAsm.s */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		74401A49EBA8261D328B36B /* Bezier.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Bezier.c; sourceTree = "<group>"; };
 		74401A49EBA8261D328B36D /* Bezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bezier.h; sourceTree = "<group>"; };
 		FBA13D9614F6DBE70021D991 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		FBCA1FBF1503E63D007BEC19 /* BezierAsm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = BezierAsm.s; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.asm.arm; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				74401A49EBA8261D328B36D /* Bezier.h */,
 				74401A49EBA8261D328B36B /* Bezier.c */,
+				FBCA1FBF1503E63D007BEC19 /* BezierAsm.s */,
 				74401A49EBA8261D328B369 /* BPAppDelegate.m */,
 				74401A49EBA8261D328B368 /* BPAppDelegate.h */,
 				74401A49EBA8261D328B360 /* Supporting Files */,
@@ -124,6 +127,9 @@
 /* Begin PBXProject section */
 		074401A49EBA8261D328B34A /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 74401A49EBA8261D328B34B /* Build configuration list for PBXProject "BezierPerf" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -160,6 +166,7 @@
 				74401A49EBA8261D328B366 /* main.m in Sources */,
 				74401A49EBA8261D328B36A /* BPAppDelegate.m in Sources */,
 				74401A49EBA8261D328B36C /* Bezier.c in Sources */,
+				FBCA1FC01503E63D007BEC19 /* BezierAsm.s in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

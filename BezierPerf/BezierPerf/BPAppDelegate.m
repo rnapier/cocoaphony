@@ -14,8 +14,6 @@
 
 @synthesize window = _window;
 
-#define BEZIER_FUNC copyBezierTable
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   const unsigned kFPS = 50;
@@ -30,8 +28,7 @@
   CGPoint lastPoint = {0};
   for (unsigned i = 0; i < kFPS * kNumCurves; ++i)
   {
-    P0.y++;
-    CGPoint *points;
+    CGPoint * __attribute__ ((align (16))) points;
     unsigned count = BEZIER_FUNC(P0, P1, P2, P3, &points);
     lastPoint = points[count-1];
     free(points);
