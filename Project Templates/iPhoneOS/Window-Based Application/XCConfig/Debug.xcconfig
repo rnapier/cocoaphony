@@ -1,0 +1,19 @@
+//
+//  Debug.xcconfig
+//  ___PROJECTNAME___
+//
+//  Created: ___DATE___
+//
+//  Copyright ___YEAR___, ___ORGANIZATIONNAME___.
+//
+
+// Configuration for Debug
+
+#include "Shared.xcconfig"
+
+GCC_PREPROCESSOR_DEFINITIONS = RN_DEBUG	// Prefix your DEBUG macro to avoid collisions.
+ONLY_ACTIVE_ARCH = YES				// Don't build universal
+GCC_OPTIMIZATION_LEVEL = 0			// Don't optimize
+COPY_PHASE_STRIP = NO				// Don't strip if we install (we don't usually)
+GCC_DYNAMIC_NO_PIC = NO				// Don't make relocatable code (take this out for shared libraries)
+GCC_WARN_UNINITIALIZED_AUTOS = NO	// -Wuninitialized. Can only be applied for optimized builds (and fails if requested in gcc 4.0.1 w/o -O)

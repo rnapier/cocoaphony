@@ -1,0 +1,148 @@
+//
+//  Shared.xcconfig
+//  ___PROJECTNAME___
+//
+//  Created: ___DATE___
+//
+//  Copyright ___YEAR___, ___ORGANIZATIONNAME___.
+//
+
+// Shared configuration for Debug and Release. Isn't used directly.
+// NOTE: Avoid changing this file. It's better to overload in the other xcconfigs, so you can upgrade this file from the templates.
+
+//
+// Code signing
+//
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer	// This will work as long as you only have one that starts with this string.
+PROVISIONING_PROFILE[sdk=iphoneos*] = DefaultProfileUuid
+
+//
+// Packaging
+//
+INFOPLIST_FILE = Info.plist		// You can override this in sub-projects, but this is the default.
+
+//
+// Search Paths
+//
+ALWAYS_SEARCH_USER_PATHS = NO	// If we use angle brackets, don't search user paths.
+
+//
+// GCC 4.0 - Language 
+//
+GCC_C_LANGUAGE_STANDARD = c99;
+GCC_PRECOMPILE_PREFIX_HEADER = YES
+
+//
+// GCC 4.0 - Warnings
+//
+
+GCC_TREAT_WARNINGS_AS_ERRORS = YES	// -Werror
+//
+// Warnings that cannot be set in XCode.
+//
+// When a -Wall or -Wextra setting duplicates an XCode flag that you've set to NO,
+// remember to also set the -Wno-* form in WARNING_CFLAGS since -Wall will turn it back on.
+// Setting a flag to NO in XCode generally just fails to include the option; it doesn't pass a -Wno-*
+//
+// === Included in WARNING_CFLAGS
+// -Wall -Wextra - The basics. We use these rather than explicitly listing the included warnings, which would be somewhat simpler, 
+//						so that when the compiler is upgraded with new warnings and no one remembers to update the build
+//						settings, the new warnings will automatically go into effect. We only list options below that are not in
+//						-Wall and -Wextra and can't be set by XCode.
+// -Wno-unused-parameter - Very common in Cocoa, but part of -Wall, so explicitly turned off
+// -Wno-unknown-pragmas - Common in code shared with VC++, like #pragma warning(disable:...). Part of -Wall, so explicitly turned off.
+// -Wextra-tokens - Better syntax checking for pre-processor
+// -Wformat-y2k - Look for new Y2K errors. 2000 may not come again, but 4-digit years are still better in most cases.
+// -Wformat-nonliteral - Don't allow variables as format specifiers
+// -Wformat-security - Watch for security problems in printf formats
+// -Winit-self - No self-initialization (int i = i).
+// -Wswitch-enum - Don't forget any of the enums in a switch statement, and default is not good enough (as it is for -Wswitch). This is a very good warning; think carefully before turning it off.
+// -Wswitch-default - Don't forget the default case if you're switching on an int. But you really should switch on an enum if you can.
+// -Wfloat-equal - Floats are seldom actually equal.
+//					#define fequal(a,b) (fabs((a) - (b)) < FLT_EPSILON)
+// -Wpointer-arith - void* doesn't have a real sizeof(). Don't pretend it does.
+// -Wredundant-decls - Warn if we redeclare anything. (We may have to remove this one.)
+// -Winvalid-pch - If you find a .pch, it had better be usable.
+// -Wlong-long - "long long" doesn't mean anything. It's the default. (We may have to remove this one.)
+// -Wdisabled-optimization - Make sure our code isn't too complicated to optimize.
+//
+// === Included in OTHER_CFLAGS (C/ObjC only)
+// -Wnested-externs - Don't bury externs in your code. Can't pass to C++ in 4.0.1.
+// -Wold-style-definition - Don't allow old-style function definitions. Can't pass to C++ in 4.0.1
+// -Wstrict-prototypes - Don't forget the argument types in function prototypes. Can't pass to C++ in 4.0.1
+// -Wundeclared-selector - Declare methods before using them in @selector(), just like calls.
+//
+// === Included in OTHER_CPLUSPLUSFLAGS (C++/ObjC++ only)
+// -Wsign-promo - C++ requires some promotions to convert a type from unsigned to signed. This can be confusing, and should at least be considered. (We may have to remove this one.)
+//
+// === Not included in WARNINGS_CFLAGS because of how XCode or Cocoa does things
+// -Wmissing-include-dirs - XCode builds include some implicit directories like DerivedSources
+// -Wcast-align - Breaks ObjC object references
+// -Wselector - Breaks almost all Cocoa calls
+// -Wstrict-selector-match - Violations are common in Cocoa.
+// -Wcast-qual - Creates problems casting between (const)CFStringRef and NSString*, which is common.
+// -Wwrite-strings - Watch out for writing into constant strings. This requires that const be used reliably, which is not common in C code.
+// -Wold-style-cast - Breaks use of YES and NO in C++ code, as well as other common cast constants.
+//
+// === Not included in WARNING_CFLAGS because we want to do these things
+// -Wunreachable-code - Many C++ standard headers (like allocator.h) include unreachable code due to throw(). (Fixed in gcc 4.0.3.) ntohl() also causes this, and it breaks some forms of error handling and inlining.
+// -Wtraditional - Too strict. Breaks lots of modern code.
+// -Wdeclaration-after-statement - This is really useful and legal in C99.
+// -Wundef - It's very useful to use "#if FOO" without having to explicit set FOO=0.
+// -Wbad-function-cast - Casting the return of a function call is too useful
+// -Wctor-dtor-privacy - Singletons can have only private constructors.
+// -Wmissing-declarations - This forces prototypes of local functions, which are common. The case of undeclared functions is covered in -Wall (-Werror-implcit-function-declaration) already.
+// -Wno-missing-field-initializers - This warns on "struct x = {0};" which is a good way to initialize a struct.
+//
+// === Not included in WARNINGS_CFLAGS because we only use gcc
+// -Waggregate-return - Returning structs is not portable across ABIs, but we only compile with gcc.
+// -Wabi - We only use one ABI: gcc's.
+// -Wstrict-null-sentinel - NULL is __null in gcc.
+
+// === Not included in WARNINGS_CFLAGS because we don't care
+// -Wsync-nand - A fairly obscure warning that shouldn't impact our code
+// -Wunsafe-loop-optimizations - It's ok if the compiler doesn't optimize these loops
+// -Wmissing-noreturn - Looks for unexploited compiler optimizations that we don't need to worry about
+// -Wmissing-format-attribute - Looks for unexploited compiler optimizations that we don't need to worry about
+// -Wpacked - Looks for attempts to space optimize that aren't helping. We don't need to worry about it.
+// -Wpadded - Looks for struct space optimizatons that we don't need to worry about.
+// -Winline - If we ask for inline, make sure we get it.
+
+WARNING_CFLAGS = -Wall -Wextra -Wno-missing-field-initializers -Wno-unused-parameter -Wno-unknown-pragmas -Wextra-tokens -Wformat-nonliteral -Wformat-security -Winit-self -Wswitch-enum -Wswitch-default -Wfloat-equal -Wpointer-arith -Wredundant-decls -Winvalid-pch -Wlong-long -Wdisabled-optimization
+OTHER_CFLAGS = -Wnested-externs -Wold-style-definition -Wstrict-prototypes -Wundeclared-selector
+OTHER_CPLUSPLUSFLAGS = -Wsign-promo -Wundeclared-selector	// Intentionally not including the original OTHER_CPLUSPLUSFLAGS. We are not going to pass OTHER_CFLAGS to C++.
+
+//
+// Warning options turned on in XCode (some are covered by WARNINGS_CFLAGS already; only includes ones that aren't on by default in XCode)
+//
+GCC_WARN_CHECK_SWITCH_STATEMENTS = YES				// -Wswitch - Weaker version of -Wswitch-enum and -Wswitch-default (defined above)
+GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES				// -Wfour-char-constants - Don't allow 'beef' style constants. These are common on Mac, but not iPhone.
+GCC_WARN_64_TO_32_BIT_CONVERSION = YES				// -Wshorten-64-to-32 - Doesn't work well with things targeted for 10.4 because there is no CGFloat.
+GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES		// -Wmissing-braces - Has to do with C data structures, not control blocks, but still useful.
+GCC_WARN_ABOUT_RETURN_TYPE = YES					// -Wreturn-type - Functions must declare their return type, and void functions must not return anything.
+GCC_WARN_MISSING_PARENTHESES = YES					// -Wparentheses - Force some extra parentheses when it's confusing. In particular, require double-parentheses when testing truth on an assignment.
+													//		This protects against mis-use of = for ==. It also breaks most Apple code, but still it's worth it.
+GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES				// -Wnon-virtual-dtor (C++) - Watch for classes that should have virtual destructors, but don't.
+GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES				// -Woverloaded-virtual (C++) - Watch out for functions that hide virtual functions in the base class.
+GCC_WARN_SIGN_COMPARE = YES							// -Wsign-compare - Comparing a signed and unsigned is dangerous.
+GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES	// -Werror-implicit-function-declaration (C) - Make sure to include function prototypes.
+GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES			// -Wformat - Type-check those printf() parameters.
+GCC_WARN_UNUSED_FUNCTION = YES						// -Wunused-function - Look for functions that are never called.
+GCC_WARN_UNUSED_LABEL = YES							// -Wunused-label - Look for labels that are never called.
+GCC_WARN_UNUSED_VALUE = YES							// -Wunused-value - Look for computations that are explicitly ignored.
+GCC_WARN_UNUSED_VARIABLE = YES						// -Wunused-variable - Look for local variables that are never used.
+GCC_WARN_UNINITIALIZED_AUTOS = YES					// -Wuninitialized. Note that this can only be applied for optimized builds.
+//
+//
+// Warning options turned off in XCode
+//
+GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO		// -Weffc++ - "Effective C++" rules.
+GCC_WARN_PEDANTIC = NO					// -pedantic - warns for use of #import, even with -Wno-import, in gcc 4.0.1
+GCC_WARN_PROTOTYPE_CONVERSION = NO		// -Wconversion - In gcc 4.0.1, this is a useless warning. It checks if ignoring the prototype would change anything. In later versions it becomes more useful.
+GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = NO	// -fpermissive - downgrades some errors to warnings. Don't.
+GCC_WARN_UNUSED_PARAMETER = NO			// -Wunusued-parameter - Very common in Cocoa
+GCC_WARN_ABOUT_MISSING_NEWLINE = NO		// -Wnewline-eof - Comes up a lot in Windows code and doesn't matter.
+GCC_WARN_UNKNOWN_PRAGMAS = NO			// -Wunknown-pragmas - Common in code shared with VC++, like #pragma warning(disable:...)
+GCC_WARN_SHADOW = NO					// -Wshadow - It seems so useful, but system headers shadow globals nortoriously. "index" is the most common.
+GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO	// -Wmissing-prototypes - This forces prototypes for file-local functions, which are common, and shouldn't need prototypes.
+GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO				// -Wno-protocol. This should really be the default. If your superclass implements part of a protocol, you shouldn't have to reimplement it.
