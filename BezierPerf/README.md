@@ -1,1 +1,1 @@
-Bézier Performance testing
+Bézier Performance testing. See [Introduction to Fast Bezier](http://robnapier.net/blog/fast-bezier-intro-701).
