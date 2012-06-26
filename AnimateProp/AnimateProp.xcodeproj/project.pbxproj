@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FBE73CF11598F45600AF139B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE73CF01598F45600AF139B /* UIKit.framework */; };
+		FBE73CF31598F45600AF139B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE73CF21598F45600AF139B /* Foundation.framework */; };
+		FBE73CF51598F45600AF139B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE73CF41598F45600AF139B /* CoreGraphics.framework */; };
+		FBE73CFB1598F45600AF139B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBE73CF91598F45600AF139B /* InfoPlist.strings */; };
+		FBE73CFD1598F45600AF139B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE73CFC1598F45600AF139B /* main.m */; };
+		FBE73D011598F45600AF139B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE73D001598F45600AF139B /* AppDelegate.m */; };
+		FBE73D041598F45600AF139B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE73D021598F45600AF139B /* MainStoryboard.storyboard */; };
+		FBE73D071598F45600AF139B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE73D061598F45600AF139B /* ViewController.m */; };
+		FBE73D121598F56400AF139B /* CircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE73D111598F56400AF139B /* CircleLayer.m */; };
+		FBE73D141598F6EA00AF139B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE73D131598F6EA00AF139B /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FBE73CEC1598F45600AF139B /* AnimateProp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimateProp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE73CF01598F45600AF139B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FBE73CF21598F45600AF139B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FBE73CF41598F45600AF139B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FBE73CF81598F45600AF139B /* AnimateProp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnimateProp-Info.plist"; sourceTree = "<group>"; };
+		FBE73CFA1598F45600AF139B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FBE73CFC1598F45600AF139B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBE73CFE1598F45600AF139B /* AnimateProp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimateProp-Prefix.pch"; sourceTree = "<group>"; };
+		FBE73CFF1598F45600AF139B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FBE73D001598F45600AF139B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FBE73D031598F45600AF139B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FBE73D051598F45600AF139B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FBE73D061598F45600AF139B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FBE73D101598F56400AF139B /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleLayer.h; path = ../CircleLayer.h; sourceTree = "<group>"; };
+		FBE73D111598F56400AF139B /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleLayer.m; path = ../CircleLayer.m; sourceTree = "<group>"; };
+		FBE73D131598F6EA00AF139B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBE73CE91598F45600AF139B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE73D141598F6EA00AF139B /* QuartzCore.framework in Frameworks */,
+				FBE73CF11598F45600AF139B /* UIKit.framework in Frameworks */,
+				FBE73CF31598F45600AF139B /* Foundation.framework in Frameworks */,
+				FBE73CF51598F45600AF139B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBE73CE11598F45600AF139B = {
+			isa = PBXGroup;
+			children = (
+				FBE73D131598F6EA00AF139B /* QuartzCore.framework */,
+				FBE73CF61598F45600AF139B /* AnimateProp */,
+				FBE73CEF1598F45600AF139B /* Frameworks */,
+				FBE73CED1598F45600AF139B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBE73CED1598F45600AF139B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBE73CEC1598F45600AF139B /* AnimateProp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBE73CEF1598F45600AF139B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBE73CF01598F45600AF139B /* UIKit.framework */,
+				FBE73CF21598F45600AF139B /* Foundation.framework */,
+				FBE73CF41598F45600AF139B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBE73CF61598F45600AF139B /* AnimateProp */ = {
+			isa = PBXGroup;
+			children = (
+				FBE73D101598F56400AF139B /* CircleLayer.h */,
+				FBE73D111598F56400AF139B /* CircleLayer.m */,
+				FBE73D051598F45600AF139B /* ViewController.h */,
+				FBE73D061598F45600AF139B /* ViewController.m */,
+				FBE73CFF1598F45600AF139B /* AppDelegate.h */,
+				FBE73D001598F45600AF139B /* AppDelegate.m */,
+				FBE73D021598F45600AF139B /* MainStoryboard.storyboard */,
+				FBE73CF71598F45600AF139B /* Supporting Files */,
+			);
+			path = AnimateProp;
+			sourceTree = "<group>";
+		};
+		FBE73CF71598F45600AF139B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBE73CF81598F45600AF139B /* AnimateProp-Info.plist */,
+				FBE73CF91598F45600AF139B /* InfoPlist.strings */,
+				FBE73CFC1598F45600AF139B /* main.m */,
+				FBE73CFE1598F45600AF139B /* AnimateProp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBE73CEB1598F45600AF139B /* AnimateProp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBE73D0A1598F45600AF139B /* Build configuration list for PBXNativeTarget "AnimateProp" */;
+			buildPhases = (
+				FBE73CE81598F45600AF139B /* Sources */,
+				FBE73CE91598F45600AF139B /* Frameworks */,
+				FBE73CEA1598F45600AF139B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimateProp;
+			productName = AnimateProp;
+			productReference = FBE73CEC1598F45600AF139B /* AnimateProp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBE73CE31598F45600AF139B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Rob Napier";
+			};
+			buildConfigurationList = FBE73CE61598F45600AF139B /* Build configuration list for PBXProject "AnimateProp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FBE73CE11598F45600AF139B;
+			productRefGroup = FBE73CED1598F45600AF139B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBE73CEB1598F45600AF139B /* AnimateProp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBE73CEA1598F45600AF139B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE73CFB1598F45600AF139B /* InfoPlist.strings in Resources */,
+				FBE73D041598F45600AF139B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBE73CE81598F45600AF139B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE73CFD1598F45600AF139B /* main.m in Sources */,
+				FBE73D011598F45600AF139B /* AppDelegate.m in Sources */,
+				FBE73D071598F45600AF139B /* ViewController.m in Sources */,
+				FBE73D121598F56400AF139B /* CircleLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FBE73CF91598F45600AF139B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBE73CFA1598F45600AF139B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FBE73D021598F45600AF139B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBE73D031598F45600AF139B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBE73D081598F45600AF139B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FBE73D091598F45600AF139B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBE73D0B1598F45600AF139B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnimateProp/AnimateProp-Prefix.pch";
+				INFOPLIST_FILE = "AnimateProp/AnimateProp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FBE73D0C1598F45600AF139B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnimateProp/AnimateProp-Prefix.pch";
+				INFOPLIST_FILE = "AnimateProp/AnimateProp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBE73CE61598F45600AF139B /* Build configuration list for PBXProject "AnimateProp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE73D081598F45600AF139B /* Debug */,
+				FBE73D091598F45600AF139B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBE73D0A1598F45600AF139B /* Build configuration list for PBXNativeTarget "AnimateProp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE73D0B1598F45600AF139B /* Debug */,
+				FBE73D0C1598F45600AF139B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBE73CE31598F45600AF139B /* Project object */;
+}
