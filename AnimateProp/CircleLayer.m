@@ -28,6 +28,7 @@
   self = [super init];
   if (self) {
     self.color = [UIColor redColor];
+    self.contentsScale = [[UIScreen mainScreen] scale];
     [self setNeedsDisplay];
   }
   return self;
